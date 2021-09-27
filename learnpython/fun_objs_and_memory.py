@@ -268,28 +268,35 @@ if __name__ == '__main__':
     main()
 
 example_output = """\
-^( | )>
+meaning of `uss` and `rss`
+uss (Linux, macOS, Windows):
+	aka “Unique Set Size”, this is the memory which is unique to a process
+	and which would be freed if the process was terminated right now.
+rss:
+	aka “Resident Set Size” this is the non-swapped physical memory a process has used.
+	On UNIX it matches “top“‘s RES column).
+	On Windows this is an alias for wset field and it matches “Mem Usage” column of taskmgr.exe.
 memory at init:
-	               uss:   8.297 MiB
-	               rss:  15.836 MiB
+	               uss:   8.395 MiB
+	               rss:  15.934 MiB
 memory after first append:
-	               uss:   8.297 MiB
-	               rss:  15.871 MiB
+	               uss:   8.395 MiB
+	               rss:  15.969 MiB
 memory after creating shared_inpt_arr:
-	               uss:  17.621 MiB
-	               rss:  25.219 MiB
+	               uss:  17.77  MiB
+	               rss:  25.363 MiB
 memory after creating process context:
-	               uss:  17.367 MiB
-	               rss:  25.113 MiB
+	               uss:  17.516 MiB
+	               rss:  25.211 MiB
 class:
-	               uss:  26.543 MiB
-	               rss:  34.195 MiB
+	               uss:  26.586 MiB
+	               rss:  34.113 MiB
 func:
-	               uss:  65.406 MiB
-	               rss:  72.812 MiB
+	               uss:  65.617 MiB
+	               rss:  72.898 MiB
 memory after exiting process context:
-	               uss:  17.367 MiB
-	               rss:  25.152 MiB
+	               uss:  17.516 MiB
+	               rss:  25.309 MiB
 
 Process finished with exit code 0
 """
