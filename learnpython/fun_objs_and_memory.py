@@ -227,6 +227,9 @@ def main():
                     system_mem_checks.append(mem_use)
                     start = perf_counter()
     print()
+    print("meaning of `uss` and `rss`")
+    print("uss (Linux, macOS, Windows): aka “Unique Set Size”, this is the memory which is unique to a process and which would be freed if the process was terminated right now.")
+    print("rss: aka “Resident Set Size”, this is the non-swapped physical memory a process has used. On UNIX it matches “top“‘s RES column). On Windows this is an alias for wset field and it matches “Mem Usage” column of taskmgr.exe.")
     sys_mem_msgs.append("memory after exiting process context")
     system_mem_checks.append(util_proc.memory_full_info())
     KiB,MiB,GiB = 2**10,2**20,2**30
