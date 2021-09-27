@@ -258,3 +258,30 @@ def main():
 
 if __name__ == '__main__':
     main()
+
+example_output = """\
+^( | )>
+memory at init:
+	               uss:   8.297 MiB
+	               rss:  15.836 MiB
+memory after first append:
+	               uss:   8.297 MiB
+	               rss:  15.871 MiB
+memory after creating shared_inpt_arr:
+	               uss:  17.621 MiB
+	               rss:  25.219 MiB
+memory after creating process context:
+	               uss:  17.367 MiB
+	               rss:  25.113 MiB
+class:
+	               uss:  26.543 MiB
+	               rss:  34.195 MiB
+func:
+	               uss:  65.406 MiB
+	               rss:  72.812 MiB
+memory after exiting process context:
+	               uss:  17.367 MiB
+	               rss:  25.152 MiB
+
+Process finished with exit code 0
+"""
